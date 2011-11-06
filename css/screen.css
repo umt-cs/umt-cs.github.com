@@ -1,0 +1,17 @@
+html {
+    background: #fff;
+    color: #666;
+    font: 18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    margin: 5% auto;
+    width: 80%;
+}
+a {
+    color: #900;
+}
+footer {
+    border-top: 2px solid #999;
+    font-size: 14px;
+    margin: 2em 0;
+}
