@@ -7,11 +7,16 @@ def bexec(cmd)
 end
 
 desc 'Launch the Jekyll server'
-task :server do
+task :server => :clobber do
   bexec 'jekyll --server'
 end
 
 desc 'Build the site'
-task :build do
+task :build => :clobber do
   bexec 'jekyll'
+end
+
+desc 'Deploy the site to ACM servers'
+task :deploy => :build do
+  system("rsync -avz _site/* acm:~/www/")
 end
