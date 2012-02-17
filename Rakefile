@@ -8,7 +8,7 @@ end
 
 desc 'Launch the Jekyll server'
 task :server => :clobber do
-  bexec 'jekyll --server'
+  bexec 'jekyll --server --auto'
 end
 
 desc 'Build the site'
