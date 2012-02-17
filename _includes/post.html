@@ -18,3 +18,7 @@
     {{ content }}
   {% endif %}
 </article>
+
+{% unless use_post %}
+  {% include disqus.html %}
+{% endunless %}
