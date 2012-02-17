@@ -51,6 +51,10 @@ header h1 {
     line-height: 1;
 }
 
+header h1 a {
+    text-decoration: none;
+}
+
 section {
     float: left;
     width: 75%;
@@ -60,6 +64,11 @@ article {}
 
 article ul, article ol {
     margin-left: 2em;
+}
+
+.meta {
+    color: #999;
+    font-size: 80%;
 }
 
 aside {
@@ -81,4 +90,10 @@ footer {
 
 .plain li {
     list-style: none;
+}
+
+#archives {
+    border-top: 2px solid #eee;
+    font-size: 80%;
+    padding: 0.5em 0 0;
 }

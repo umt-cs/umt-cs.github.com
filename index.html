@@ -1,93 +1,20 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link href="css/screen.css" rel="stylesheet" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-    <title>University of Montana-Missoula ACM Chapter</title>
-  </head>
-  <body>
-    <header>
-      <img src="img/acm.png"
-           alt="Association for Computing Machinery logo">
-      <h1>
-        University of Montana Chapter
-      </h1>
-    </header>
+---
+layout: default
+title:  University of Montana-Missoula ACM Chapter
+---
 
-    <section>
-      <article>
-        <h2>First Meeting of the Semester</h2>
-        <p>
-          Come help plan what we&#8217;re going to do this semester. If that's
-          not exciting, come for free pizza! <strong>Friday, Feb. 3 at 5:30
-          PM</strong>.
-          </p>
-      </article>
+{% assign post = site.posts.first %}
+{% assign use_post = true %}
+{% include post.html %}
 
-      <hr>
-      <article>
-        <h2>Last Club Meeting of 2011</h2>
-        <p>
-          We&#8217;ll be meeting for the last time this
-          semester, <strong>Friday (Dec. 9)</strong> at 5:30 PM in
-          Social Sciences 362. It'll be a series of small lectures
-          (2-5 min) followed by some planning for next semester:
-        </p>
-        <ul>
-          <li>iOS development by Josh Austin</li>
-          <li>Windows phone development by Nick Busby</li>
-          <li>Ruby by Jon-Michael Deldin</li>
-          <li>TeX by Clinton McKay</li>
-          <li>Flex development by Craig McNinch</li>
-        </ul>
-        <p>See you then!</p>
-      </article>
-    </section>
-
-    <aside>
-      <h3>Resources</h3>
-      <ul>
-        <li>
-          <a href="http://www.cs.umt.edu">CS Department</a>
-        </li>
-        <li>
-          <a href="http://acm.org">Association for Computing
-            Machinery</a>
-        </li>
-        <li>
-          <a href="http://www.acm.org/about/code-of-ethics">
-            Code of Ethics
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/umt-cs">Our GitHub account</a>
-        </li>
-      </ul>
-
-      <h3>Administration</h3>
-      <ul class="plain">
-        <li>
-          <a href="http://jmdeldin.com">
-            Jon-Michael Deldin</a>
-          (President)</li>
-        <li>
-          <a href="http://oneseventyfour.com">Alex Ross</a>
-          (Vice President)</li>
-        <li>
-          <a href="http://rphv.net/">
-            Perry Hooker</a> (Treasurer)</li>
-        <li>
-          <a href="http://www.cs.umt.edu/~mikero">
-            Mike Rosulek</a> (Faculty)</li>
-      </ul>
-    </aside>
-
-    <div class="clear"></div>
-    <footer>
-      <p>
-        Interested in joining? Contact <tt>jon-michael.deldin@umontana</tt>.
-      </p>
-    </footer>
-  </body>
-</html>
+<section id="archives">
+  <h3>Archives</h3>
+  <ul>
+    {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span>:
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

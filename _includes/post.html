@@ -1,0 +1,20 @@
+<article>
+  <h2>
+    {% if use_post %}
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    {% else %}
+      {{ post.title }}
+    {% endif %}
+  </h2>
+  <p class="meta">
+    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+      {{ post.date | date_to_string }}
+    </time> by {{ post.author }}
+  </p>
+
+  {% if use_post %}
+    {{ post.content }}
+  {% else %}
+    {{ content }}
+  {% endif %}
+</article>

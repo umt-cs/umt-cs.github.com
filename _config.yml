@@ -1,0 +1,6 @@
+permalink: pretty
+markdown:  rdiscount
+exclude:
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
