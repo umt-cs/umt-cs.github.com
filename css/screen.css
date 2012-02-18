@@ -100,4 +100,10 @@ footer {
 
 table {
     text-align: left;
+    width: 100%;
+    font-size: 80%;
+}
+
+tr:nth-child(odd) {
+    background: #FBFBFB;
 }
